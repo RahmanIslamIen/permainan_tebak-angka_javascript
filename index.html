@@ -230,8 +230,7 @@
           alert("Browser yang Anda gunakan tidak mendukung Web Storage");
         }
       });
-    </script>
-    <script>
+
       window.addEventListener("load", function () {
         if (typeof Storage !== "undefined") {
           // inisialisasi semua item web storage yang kita akan gunakan jika belum ada
@@ -254,6 +253,15 @@
           alert("Browser yang Anda gunakan tidak mendukung Web Storage");
         }
       });
+
+      sessionUserAttemptsField.innerText = sessionStorage.getItem(
+        sessionUserAttemptsKey
+      );
+      localTotalVictoryField.innerText =
+        localStorage.getItem(localTotalVictoryKey);
+      localMaximumAttemptField.innerText = localStorage.getItem(
+        localMaximumAttemptsKey
+      );
     </script>
   </body>
 </html>
